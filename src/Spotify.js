@@ -1,6 +1,7 @@
 export const authEndPoint = "https://accounts.spotify.com/authorize";
 
-const redirectUrl = "http://localhost:3000/";
+// const redirectUrl = "http://localhost:3000/";
+const redirectUrl = "https://react-spotify-one.vercel.app/";
 
 //本当は見られてはいけない
 const clientId = "05cec88ce01b4a4882cf567710c84d0e";
