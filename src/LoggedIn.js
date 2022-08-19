@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Canvas from "./Canvas";
 
 const LoggedIn = (props) => {
 
@@ -18,6 +19,7 @@ const LoggedIn = (props) => {
       }).then(res => res.json())
         .then(data => {
           setMe(data);
+          
           // console.log(data);
         });
 
@@ -32,7 +34,6 @@ const LoggedIn = (props) => {
           
           setAritists(data);
 
-          let resultList = [];
           let processes = [];
           data.items.forEach(item => {
             processes.push(
@@ -67,6 +68,11 @@ const LoggedIn = (props) => {
   return (
     <div>
       <h1>Spotifyへログインしました</h1>
+      {
+        artists.items 
+          ? <Canvas artists = {artists.items} /> 
+          : <h1>YOYO</h1> 
+      }
       <div>
         <ul>
             <li>{me.display_name}</li>

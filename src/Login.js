@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { accessUrl } from "./Spotify";
+import Canvas from "./Canvas";
 
 const Login = () => {
   return (
